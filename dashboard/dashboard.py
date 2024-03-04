@@ -16,7 +16,11 @@ st.sidebar.markdown('**ID Dicoding:** ziddan2808')
 
 
 # Load your data
-all_df = pd.read_csv('all_data.csv')
+all_df = pd.read_csv(
+    'https://raw.githubusercontent.com/zidan2808/submission-dashboard/main/dashboard/all_data.csv')
+
+# Display the DataFrame
+st.write(all_df)
 
 # Menghitung Jumlah Data Statistik Customer
 total_customers = all_df['customer_id'].nunique()
